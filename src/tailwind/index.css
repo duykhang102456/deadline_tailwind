@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@config '../../tailwind.config.js';
+/* @theme {
+    --color-success1: orange;
+} */
+
+*{
+    font-family: "Roboto", sans-serif !important;
+}

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myportfolio</title>
+    <link rel="stylesheet" href="/src/css/index.css">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--custom css-->
+    <link rel="stylesheet" href="/src/css/custom.css">
+
+</head>
+
+<body>
+    <header class="header absolute top-0 left-0 w-full z-20 h-[60px]">
+        <div class="container-fluid">
+            <!-- Main navigation container -->
+            <nav class="relative flex w-full flex-nowrap items-center justify-between bg-transparent py-2 text-white  hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-700 lg:flex-wrap lg:justify-start lg:py-4"
+                data-twe-navbar-ref>
+                <div class="flex w-full flex-wrap items-center justify-around px-3 py-5">
+                    <div class="ms-2">
+                        <i class="fa fa-dice-d20 text-success text-5xl"></i>
+                        <a class="text-3xl text-white dark:text-white capitalize" href="#">Cyber portfolio</a>
+                    </div>
+                    <!-- Hamburger button for mobile view -->
+                    <button
+                        class="block border-0 bg-transparent px-2 text-white hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+                        type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent2"
+                        aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+                        <!-- Hamburger icon -->
+                        <span class="[&>svg]:w-7 [&>svg]:stroke-white dark:[&>svg]:stroke-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <!-- Collapsible navbar container -->
+                    <div class="!visible mt-2 hidden items-center lg:mt-0 lg:!flex lg:basis-auto"
+                        id="navbarSupportedContent2" data-twe-collapse-item>
+                        <!-- Left links -->
+                        <ul class="list-style-none me-auto flex flex-col ps-0 lg:mt-1 lg:flex-row"
+                            data-twe-navbar-nav-ref>
+                            <!-- Home link -->
+                            <li class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2" data-twe-nav-item-ref>
+                                <a class="text-success active  dark:text-white lg:px-2" aria-current="page" href="#"
+                                    data-twe-nav-link-ref>Home</a>
+                            </li>
+                            <!-- Features link -->
+                            <li class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0" data-twe-nav-item-ref>
+                                <a class="p-0 text-white transition duration-200 hover:text-success hover:ease-in-out focus:text-success active:text-success motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                                    href="#" data-twe-nav-link-ref>About</a>
+                            </li>
+                            <li class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0" data-twe-nav-item-ref>
+                                <a class="p-0 text-white transition duration-200 hover:text-success hover:ease-in-out focus:text-success active:text-success motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                                    href="#" data-twe-nav-link-ref>Service</a>
+                            </li>
+                            <li class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0" data-twe-nav-item-ref>
+                                <a class="p-0 text-white transition duration-200 hover:text-success hover:ease-in-out focus:text-success active:text-success motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                                    href="#" data-twe-nav-link-ref>Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <section class="carousel">
+        <div id="carouselExampleCaptions" class="relative" data-twe-carousel-init data-twe-ride="carousel">
+            <!--Carousel indicators-->
+            <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+                data-twe-carousel-indicators>
+                <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="0"
+                    data-twe-carousel-active
+                    class="mx-[3px] box-content h-[20px] w-[20px] rounded-[50%] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-success bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="1"
+                    class="mx-[3px] box-content  h-[20px] w-[20px] rounded-[50%] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-success bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="2"
+                    class="mx-[3px] box-content h-[20px] w-[20px] rounded-[50%] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-success bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <!--Carousel items-->
+            <div class="relative w-full overflow-hidden after:clear-both after:block after:content-[''] h-screen">
+                <!--First item-->
+                <div class="relative  float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                    data-twe-carousel-active data-twe-carousel-item style="backface-visibility: hidden">
+                    <img src="/src/img/mountains-1.jpg" class="block w-full" alt="..." />
+
+                    <div
+                        class="sm:hidden flex flex-col h-full justify-center items-center absolute inset-x-[15%] bottom-5  py-5 text-center text-white md:flex">
+                        <img class="rounded-[50%] w-[150px] h-[150px]" src="/src/img/01-3.jpg" alt="avatar" />
+                        <h5 class="text-xl">First slide label</h5>
+                        <p>
+                            Some representative placeholder content for the first slide.
+                        </p>
+
+                    </div>
+                    <!-- <div>after</div> -->
+                </div>
+                <!--Second item-->
+                <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none h-screen"
+                    data-twe-carousel-item style="backface-visibility: hidden">
+                    <img src="/src/img/mountains.jpg" class="block w-full" alt="..." />
+                    <div
+                        class="sm:hidden flex flex-col h-full justify-center items-center absolute inset-x-[15%] bottom-5  py-5 text-center text-white md:flex">
+                        <img class="rounded-[50%] w-[150px] h-[150px]" src="/src/img/02-3.jpg" alt="avatar" />
+                        <h5 class="text-xl">First slide label</h5>
+                        <p>
+                            Some representative placeholder content for the first slide.
+                        </p>
+                    </div>
+                </div>
+                <!--Third item-->
+                <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none h-screen"
+                    data-twe-carousel-item style="backface-visibility: hidden">
+                    <img src="/src/img/finland.jpg" class="block w-full" alt="..." />
+                    <div
+                        class="sm:hidden flex flex-col h-full justify-center items-center absolute inset-x-[15%] bottom-5  py-5 text-center text-white md:flex">
+                        <img class="rounded-[50%] w-[150px] h-[150px]" src="/src/img/03-3.jpg" alt="avatar" />
+                        <h5 class="text-xl">First slide label</h5>
+                        <p>
+                            Some representative placeholder content for the first slide.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Carousel controls - prev item-->
+            <button
+                class="hidden absolute bottom-0 left-0 top-0 z-[1]  w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+                type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide="prev">
+                <span class="inline-block h-8 w-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </span>
+                <span
+                    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+            </button>
+            <!--Carousel controls - next item-->
+            <button
+                class="absolute bottom-0 right-0 top-0 z-[1] hidden w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+                type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide="next">
+                <span class="inline-block h-8 w-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </span>
+                <span
+                    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+            </button>
+        </div>
+
+    </section>
+
+    <section class="projects">
+        <div class="container-fluid">
+            <h1 class="mt-10 py-8 text-center text-5xl font-bold">I Love What I Do</h1>
+            <p class="text-base fw-normal text-gray-500 w-1/3 mx-auto text-center">
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis
+                dapibus nunc, ut rhoncus turpis sodales quis. Integer sit amet mattis quam.Vestibulum ante ipsum primis
+                in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc
+            </p>
+            <div class="products w-2/3 mx-auto mt-10">
+                <!--Pills navigation-->
+                <ul class="mb-5 flex list-none flex-row justify-center w-full mx-auto flex-wrap ps-0 md:flex-row gap-5"
+                    role="tablist" data-twe-nav-ref>
+                    <li role="presentation" class="basis-0">
+                        <a href="#all-project"
+                            class="links w-full text-gray-500 my-2 text-base block rounded bg-zinc-100 px-7 pb-3.5 pt-4  font-medium  leading-tight data-[twe-nav-active]:!bg-success a-[twe-nav-active]:text-primary-700 dark:bg-neutral-700 dark:text-white/50 dark:data-[twe-nav-active]:!bg-slate-900 dark:data-[twe-nav-active]:text-primary-500 md:me-4"
+                            id="pills-all-project-tab" data-twe-toggle="pill" data-twe-target="#all-project"
+                            data-twe-nav-active role="tab" aria-controls="all-project"
+                            aria-selected="true">All&nbsp;Project </a>
+                    </li>
+                    <li role="illustration" class=" basis-0 text-center">
+                        <a href="#pills-illustration"
+                            class="links w-full  text-gray-400 my-2 text-base block rounded bg-zinc-100 px-7 pb-3.5 pt-4  font-medium  leading-tight data-[twe-nav-active]:!bg-success a-[twe-nav-active]:text-primary-700 dark:bg-neutral-700 dark:text-white/50 dark:data-[twe-nav-active]:!bg-slate-900 dark:data-[twe-nav-active]:text-primary-500 md:me-4"
+                            id="pills-illustration-tab" data-twe-toggle="pill" data-twe-target="#pills-illustration"
+                            role="tab" aria-controls="pills-illustration" aria-selected="false">Illustration</a>
+                    </li>
+                    <li role="photography" class="basis-0 text-center">
+                        <a href="#pills-photography"
+                            class="links w-full  text-gray-400 my-2 text-base block rounded bg-zinc-100 px-7 pb-3.5 pt-4  font-medium  leading-tight data-[twe-nav-active]:!bg-success a-[twe-nav-active]:text-primary-700 dark:bg-neutral-700 dark:text-white/50 dark:data-[twe-nav-active]:!bg-slate-900 dark:data-[twe-nav-active]:text-primary-500 md:me-4"
+                            id="pills-photography-tab" data-twe-toggle="pill" data-twe-target="#pills-photography"
+                            role="tab" aria-controls="pills-photography" aria-selected="false">Photography</a>
+                    </li>
+                    <li role="website" class="basis-0 text-center">
+                        <a href="#pills-website"
+                            class="links w-full text-gray-400 my-2 text-base block rounded bg-zinc-100 px-7 pb-3.5 pt-4  font-medium  leading-tight data-[twe-nav-active]:!bg-success a-[twe-nav-active]:text-primary-700 dark:bg-neutral-700 dark:text-white/50 dark:data-[twe-nav-active]:!bg-slate-900 dark:data-[twe-nav-active]:text-primary-500 md:me-4"
+                            id="pills-website-tab" data-twe-toggle="pill" data-twe-target="#pills-website" role="tab"
+                            aria-controls="pills-website" aria-selected="false">Website</a>
+                    </li>
+                </ul>
+
+                <!--Pills content-->
+                <div class="mb-6">
+                    <div class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+                        id="all-project" role="tabpanel" aria-labelledby="pills-all-project-tab" data-twe-tab-active>
+
+                        <div class="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-auto gap-2.5">
+                            <div class="item">
+                                <div class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+                                    <a href="#!">
+                                        <img class="rounded-t-lg" src="/src/img/g1.jpg" alt="" />
+                                    </a>
+                                    <div
+                                        class="card-content p-6 text-black dark:text-white border border-gray-300 rounded-b-2xl  duration-500">
+                                        <h5
+                                            class="mb-2 text-2xl font-[bold] text-center w-2/3 mx-auto leading-8 hover:text-success-300 ">
+                                            Apologetic robot holding flowers
+                                        </h5>
+                                        <p class="text-black mb-4 text-base font-[100] text-center">
+                                            Branding
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="item">
+                                <div class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+                                    <a href="#!">
+                                        <img class="rounded-t-lg" src="/src/img/g2.jpg" alt="" />
+                                    </a>
+                                    <div
+                                        class="card-content p-6 text-black dark:text-white border border-gray-300 rounded-b-2xl hover:border-success-300 transition-all duration-500">
+                                        <h5
+                                            class="mb-2 text-2xl font-[bold] text-center w-2/3 mx-auto leading-8 hover:text-success-300 ">
+                                            Apologetic robot holding flowers
+                                        </h5>
+                                        <p class="mb-4 text-base font-[100] text-black text-center">
+                                            Branding
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="item">
+                                <div class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+                                    <a href="#!">
+                                        <img class="rounded-t-lg" src="/src/img/g3.jpg" alt="" />
+                                    </a>
+                                    <div
+                                        class="card-content p-6 text-black dark:text-white border border-gray-300 rounded-b-2xl hover:border-success-300 transition-all duration-500">
+                                        <h5
+                                            class="mb-2 text-2xl font-[bold] text-center w-2/3 mx-auto leading-8 hover:text-success-300 ">
+                                            Apologetic robot holding flowers
+                                        </h5>
+                                        <p class="mb-4 text-base font-[100] text-black text-center">
+                                            Branding
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="item">
+                                <div class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+                                    <a href="#!">
+                                        <img class="rounded-t-lg" src="/src/img/g4.jpg" alt="" />
+                                    </a>
+                                    <div
+                                        class="card-content p-6 text-black dark:text-white border border-gray-300 rounded-b-2xl hover:border-success-300 transition-all duration-500">
+                                        <h5
+                                            class="mb-2 text-2xl font-[bold] text-center w-2/3 mx-auto leading-8 hover:text-success-300 ">
+                                            Apologetic robot holding flowers
+                                        </h5>
+                                        <p class="mb-4 text-base font-[100] text-black text-center">
+                                            Branding
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="item">
+                                <div class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+                                    <a href="#!">
+                                        <img class="rounded-t-lg" src="/src/img/g5.jpg" alt="" />
+                                    </a>
+                                    <div
+                                        class="card-content p-6 text-black dark:text-white border border-gray-300 rounded-b-2xl hover:border-success-300 transition-all duration-500">
+                                        <h5
+                                            class="mb-2 text-2xl font-[bold] text-center w-2/3 mx-auto leading-8 hover:text-success-300 ">
+                                            Apologetic robot holding flowers
+                                        </h5>
+                                        <p class="mb-4 text-base font-[100] text-black text-center">
+                                            Branding
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="item">
+                                <div class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+                                    <a href="#!">
+                                        <img class="rounded-t-lg" src="/src/img/g6.jpg" alt="" />
+                                    </a>
+                                    <div
+                                        class="card-content p-6 text-black dark:text-white border border-gray-300 rounded-b-2xl hover:border-success-300 transition-all duration-500">
+                                        <h5
+                                            class="mb-2 text-2xl font-[bold] text-center w-2/3 mx-auto leading-8 hover:text-success-300 ">
+                                            Apologetic robot holding flowers
+                                        </h5>
+                                        <p class="mb-4 text-base font-[100] text-black text-center">
+                                            Branding
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+                        id="pills-illustration" role="tabpanel" aria-labelledby="pills-illustration-tab">
+                        <div class="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-auto gap-2.5">
+                            <div class="item">
+                                <div class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+                                    <a href="#!">
+                                        <img class="rounded-t-lg" src="/src/img/g1.jpg" alt="" />
+                                    </a>
+                                    <div
+                                        class="card-content p-6 text-black dark:text-white border border-gray-300 rounded-b-2xl hover:border-success-300 transition-all duration-500">
+                                        <h5
+                                            class="mb-2 text-2xl font-[bold] text-center w-2/3 mx-auto leading-8 hover:text-success-300 ">
+                                            Apologetic robot holding flowers
+                                        </h5>
+                                        <p class="mb-4 text-base font-[100] text-black text-center">
+                                            Branding
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="item">
+                                <div class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+                                    <a href="#!">
+                                        <img class="rounded-t-lg" src="/src/img/g2.jpg" alt="" />
+                                    </a>
+                                    <div
+                                        class="card-content p-6 text-black dark:text-white border border-gray-300 rounded-b-2xl hover:border-success-300 transition-all duration-500">
+                                        <h5
+                                            class="mb-2 text-2xl font-[bold] text-center w-2/3 mx-auto leading-8 hover:text-success-300 ">
+                                            Apologetic robot holding flowers
+                                        </h5>
+                                        <p class="mb-4 text-base font-[100] text-black text-center">
+                                            Branding
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="item">
+                                <div class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+                                    <a href="#!">
+                                        <img class="rounded-t-lg" src="/src/img/g3.jpg" alt="" />
+                                    </a>
+                                    <div
+                                        class="card-content p-6 text-black dark:text-white border border-gray-300 rounded-b-2xl hover:border-success-300 transition-all duration-500">
+                                        <h5
+                                            class="mb-2 text-2xl font-[bold] text-center w-2/3 mx-auto leading-8 hover:text-success-300 ">
+                                            Apologetic robot holding flowers
+                                        </h5>
+                                        <p class="mb-4 text-base font-[100] text-black text-center">
+                                            Branding
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block active"
+                        id="pills-photography" role="tabpanel" aria-labelledby="pills-photography-tab">
+
+                        <div class="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-auto gap-2.5">
+                            <div class="item">
+                                <div class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+                                    <a href="#!">
+                                        <img class="rounded-t-lg" src="/src/img/g3.jpg" alt="" />
+                                    </a>
+                                    <div
+                                        class="card-content p-6 text-black dark:text-white border border-gray-300 rounded-b-2xl hover:border-success-300 transition-all duration-500">
+                                        <h5
+                                            class="mb-2 text-2xl font-[bold] text-center w-2/3 mx-auto leading-8 hover:text-success-300 ">
+                                            Apologetic robot holding flowers
+                                        </h5>
+                                        <p class="mb-4 text-base font-[100] text-black text-center">
+                                            Branding
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="item">
+                                <div class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+                                    <a href="#!">
+                                        <img class="rounded-t-lg" src="/src/img/g4.jpg" alt="" />
+                                    </a>
+                                    <div
+                                        class="card-content p-6 text-black dark:text-white border border-gray-300 rounded-b-2xl hover:border-success-300 transition-all duration-500">
+                                        <h5
+                                            class="mb-2 text-2xl font-[bold] text-center w-2/3 mx-auto leading-8 hover:text-success-300 ">
+                                            Apologetic robot holding flowers
+                                        </h5>
+                                        <p class="mb-4 text-base font-[100] text-black text-center">
+                                            Branding
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+                        id="pills-website" role="tabpanel" aria-labelledby="pills-website-tab">
+                        <div class="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-auto gap-2.5">
+                            <div class="item">
+                                <div class="block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+                                    <a href="#!">
+                                        <img class="rounded-t-lg" src="/src/img/g6.jpg" alt="" />
+                                    </a>
+                                    <div
+                                        class="card-content p-6 text-black dark:text-white border border-gray-300 rounded-b-2xl hover:border-success-300 transition-all duration-500">
+                                        <h5
+                                            class="mb-2 text-2xl font-[bold] text-center w-2/3 mx-auto leading-8 hover:text-success-300 ">
+                                            Apologetic robot holding flowers
+                                        </h5>
+                                        <p class="mb-4 text-base font-[100] text-black text-center">
+                                            Branding
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <div class="grid grid-cols-3 gap-1.5 w-[70%] mx-auto">
+            <div class="item ">
+                <div class="card  ">
+                    <img src="/src/img/g2.jpg" class="rounded-t-2xl" alt="..." />
+                    <div class="card-body border border-gray-500 rounded-b-2xl p-5 text-center py-14">
+                        <h1 class="card-title text-2xl font-bold text-black">Card title</h1>
+                        <p class="card-desc text-base font-light text-gray-500">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div> -->
+
+
+    </section>
+    <section class="available">
+        <div class="overlay"></div>
+        <div class="container">
+            <h2 class="text-5xl text-white font-bold mb-10">I'm Available For Hire</h2>
+            <p class="text-white w-[50%] text-center">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus turpis sodales quis. Integer sit amet mattis quam.</p>
+            <div class="flex justify-center gap-6 flex-wrap">
+                <div class="card_item">
+                    <div class="overlay_item"></div>
+                    <div class="text text-white py-10 px-6">
+                        <i class="fa fa-check-circle text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Web Design</h3>
+                        <p>Modern and responsive designs</p>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="text text-white py-10 px-6">
+                        <i class="fa fa-code text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Development</h3>
+                        <p>Clean and functional code</p>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="text text-white py-10 px-6">
+                        <i class="fa fa-camera text-3xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Photography</h3>
+                        <p>Capture your moments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="award">
+        <div class="award__bg">
+        </div>
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-5">
+                    <div class="award__left heading">
+                        <h2>Our Achievement and Award</h2>
+                        <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus
+                            nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-7">
+                    <div class="award__right">
+                        <p>Luctus porta semper aptent morbi. Vestibulum lectus tempus augue dictumst enim commodo
+                            facilisis. Mus laoreet scelerisque habitant urna dui sem diam. Purus dis nam eget.
+                            Scelerisque placerat lectus lorem etiam. Elementum integer phasellus lectus.</p>
+                        <div class="row">
+                            <div class="col">
+                                <img class="img-fluid" src="./img/award-1.png" alt="">
+                            </div>
+                            <div class="col">
+                                <img class="img-fluid" src="./img/award-2.png" alt="">
+                            </div>
+                            <div class="col">
+                                <img class="img-fluid" src="./img/award-3.png" alt="">
+                            </div>
+                            <div class="col">
+                                <img class="img-fluid" src="./img/award-4.png" alt="">
+                            </div>
+                            <div class="col">
+                                <img class="img-fluid" src="./img/award-5.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white text-center py-6">
+        <div class="container text-center text-white">
+
+            <div class="footer__main">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer__copies">
+                <p>© 2021 CyberPortfolio. All rights reserved | Designed by <a href="#">CyberSoft</a></p>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="/node_modules/tw-elements/js/tw-elements.umd.min.js"></script>
+</body>
+
+</html>

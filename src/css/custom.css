@@ -1,0 +1,145 @@
+.carousel [data-twe-carousel-item]::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+
+.carousel [data-twe-carousel-item] img,
+.carousel [data-twe-carousel-item] div {
+
+    z-index: 15;
+}
+
+.carousel [data-twe-carousel-indicators] {
+    z-index: 20;
+}
+
+.header [data-twe-navbar-ref] [data-twe-nav-link-ref] {
+    position: relative;
+}
+
+.header [data-twe-navbar-ref] [data-twe-nav-link-ref]::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 7%;
+    width: 0%;
+    height: 3px;
+    background: green;
+    /* margin: 0 auto; */
+    transition: all 0.5s;
+}
+
+
+.header [data-twe-navbar-ref] [data-twe-nav-link-ref]:hover::after {
+    width: 90%;
+    /* margin: 0 auto; */
+    transition: all 0.5s;
+}
+
+a.active {
+    border-bottom: 3px solid green !important;
+    padding-bottom: 2px !important;
+}
+
+.projects .products [data-twe-nav-active] {
+    color: #fff !important;
+}
+
+.projects .item {
+    cursor: pointer;
+}
+
+.projects .item:hover .card-content h5,
+.projects .item:hover .card-content p {
+    color: #15ee6c;
+    transition: all 0.5s;
+}
+
+.projects .item:hover .card-content {
+    border-color: #15ee6c;
+    transition: all 0.5s;
+}
+
+.projects .item>div {
+    animation: display-zoom 0.5s;
+}
+
+.available {
+    position: relative;
+    background-image: url(../img/3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0 110px;
+    z-index: 1;
+}
+
+.available .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7,10,12,.72);
+    z-index: 2;
+}
+
+.available .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+}
+
+.available .container .card_item {
+    width: 30%;
+    height: 50%;
+    margin-right: 25px;
+    opacity: 0.5;
+    transition: all 1s;
+    position: relative;
+    z-index: 5;
+}
+
+.available .container .card_item .overlay_item {
+    background-color: gray;
+}
+
+.available .container .card_item:hover .text {
+    background: #000;
+}
+
+.available .container .card_item .text  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+
+
+
+@keyframes display-zoom {
+    0% {
+        transform: scale(0, 0);
+    }
+
+    /* 33% {
+        transform: scale(2,2);       
+    } */
+    100% {
+        transform: scale(1, 1);
+    }
+
+}
